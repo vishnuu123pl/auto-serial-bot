@@ -48,16 +48,12 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton("+ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ +", url=f'http://t.me/{temp.U_NAME}?startgroup=start')
         ],[
-            InlineKeyboardButton('🔎 sᴇᴀʀᴄʜ ɪɴʟɪɴᴇ 🔍', switch_inline_query_current_chat='')
-        ],[
             InlineKeyboardButton('⚡️ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ ⚡️', url=UPDATES_LINK),
             InlineKeyboardButton('💡 Support Group 💡', url=SUPPORT_LINK)
         ],[
             InlineKeyboardButton('👨‍🚒 ʜᴇʟᴘ', callback_data='help'),
             InlineKeyboardButton('📚 ᴀʙᴏᴜᴛ', callback_data='my_about'),
             InlineKeyboardButton('👤 ᴏᴡɴᴇʀ', callback_data='my_owner')
-        ],[
-            InlineKeyboardButton('💰 ᴇᴀʀɴ ᴍᴏɴᴇʏ ʙʏ ʙᴏᴛ 💰', callback_data='earn')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -74,7 +70,7 @@ async def start(client, message):
         _, token = mc.split("_", 1)
         verify_status = await get_verify_status(message.from_user.id)
         if verify_status['verify_token'] != token:
-            return await message.reply("Your verify token is invalid.")
+            return await message.reply("📥 നിങ്ങൾ verify ചെയ്ത ലിങ്ക് invalid ആണ്. Try Again or Contact ADMIN @vis_hnu_bot ✅..")
         await update_verify_status(message.from_user.id, is_verified=True, verified_time=time.time())
         if verify_status["link"] == "":
             reply_markup = None
@@ -83,7 +79,7 @@ async def start(client, message):
                 InlineKeyboardButton("📌 Get File 📌", url=f'https://t.me/{temp.U_NAME}?start={verify_status["link"]}')
             ]]
             reply_markup = InlineKeyboardMarkup(btn)
-        await message.reply(f"✅ You successfully verified until: {get_readable_time(VERIFY_EXPIRE)}", reply_markup=reply_markup, protect_content=True)
+        await message.reply(f"✅ <b>🧬 തങ്ങളുടെ വെരിഫിക്കേഷൻ പൂർണമായി ✅. \n \n 𝘕𝘖𝘛𝘌:- ഇനി നിങ്ങൾ ഗ്രൂപ്പിൽ പോയി ഈ Bot വഴി അടുത്ത 1 മണിക്കൂറിൽ സീരിയൽ ബട്ടണിൽ ക്ലിക്ക് ചെയ്താൽ സീരിയൽ Direct ആയി അയച്ചു തരും ✅. </b> \n \nGroup Link :- https://t.me/+whVIAS400c02ZjVl", reply_markup=reply_markup, protect_content=True)
         return
     
     verify_status = await get_verify_status(message.from_user.id)
@@ -97,7 +93,7 @@ async def start(client, message):
             ],[
                 InlineKeyboardButton('🗳 Tutorial 🗳', url=VERIFY_TUTORIAL)
             ]]
-            await message.reply("<b>🧬 താഴെ കാണുന്ന "🧿 VERIFY 🧿" എന്ന ബട്ടണിൽ ക്ലിക്ക് ചെയ്ത് verify ചെയ്യുക.</b>", reply_markup=InlineKeyboardMarkup(btn), protect_content=True)
+            await message.reply("<b>🧬 താഴെ കാണുന്ന __🧿 VERIFY 🧿__ എന്ന ബട്ടണിൽ ക്ലിക്ക് ചെയ്ത് verify ചെയ്യുക.</b>", reply_markup=InlineKeyboardMarkup(btn), protect_content=True)
             return
     else:
         pass
@@ -183,7 +179,7 @@ async def start(client, message):
     )
     if settings.get('is_stream', IS_STREAM):
         btn = [[
-            InlineKeyboardButton("✛ ᴡᴀᴛᴄʜ & ᴅᴏᴡɴʟᴏᴀᴅ ✛", callback_data=f"stream#{file_id}")
+            InlineKeyboardButton("📥  𝘞𝘈𝘛𝘊𝘏 𝘖𝘕𝘓𝘐𝘕𝘌 & 𝘚𝘈𝘝𝘌 𝘛𝘖 𝘎𝘈𝘓𝘓𝘌𝘙𝘠  📥", callback_data=f"stream#{file_id}")
         ],[
             InlineKeyboardButton('⚡️ ᴜᴘᴅᴀᴛᴇs ⚡️', url=UPDATES_LINK),
             InlineKeyboardButton('💡 ꜱᴜᴘᴘᴏʀᴛ 💡', url=SUPPORT_LINK)
