@@ -84,7 +84,7 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Files')
 SUPPORT_LINK = environ.get('SUPPORT_LINK', 'https://t.me/asianet_surya_zee')
 OWNER_USERNAME = environ.get("OWNER_USERNAME", "https://t.me/vis_hnu_bot")
 UPDATES_LINK = environ.get('UPDATES_LINK', 'https://t.me/ASIANET_SURYA_MAZHAVILMANORAMA')
-FILMS_LINK = environ.get('FILMS_LINK', ''https://t.me/ASIANET_SURYA_MAZHAVILMANORAMA)
+FILMS_LINK = environ.get('FILMS_LINK', 'https://t.me/ASIANET_SURYA_MAZHAVILMANORAMA')
 TUTORIAL = environ.get("TUTORIAL", "https://t.me/Asianet_serial_HPM/295")
 VERIFY_TUTORIAL = environ.get("VERIFY_TUTORIAL", "https://t.me/Asianet_serial_HPM/295")
 
