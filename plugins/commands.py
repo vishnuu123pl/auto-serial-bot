@@ -97,7 +97,7 @@ async def start(client, message):
             ],[
                 InlineKeyboardButton('🗳 Tutorial 🗳', url=VERIFY_TUTORIAL)
             ]]
-            await message.reply("You not verified today! Kindly verify now. 🔐", reply_markup=InlineKeyboardMarkup(btn), protect_content=True)
+            await message.reply("<b>🧬 താഴെ കാണുന്ന "🧿 VERIFY 🧿" എന്ന ബട്ടണിൽ ക്ലിക്ക് ചെയ്ത് verify ചെയ്യുക.</b>", reply_markup=InlineKeyboardMarkup(btn), protect_content=True)
             return
     else:
         pass
