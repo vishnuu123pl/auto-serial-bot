@@ -79,7 +79,7 @@ async def start(client, message):
                 InlineKeyboardButton("📌 Get File 📌", url=f'https://t.me/{temp.U_NAME}?start={verify_status["link"]}')
             ]]
             reply_markup = InlineKeyboardMarkup(btn)
-        await message.reply(f"✅ <b>🧬 തങ്ങളുടെ വെരിഫിക്കേഷൻ പൂർണമായി ✅. \n \n 𝘕𝘖𝘛𝘌:- ഇനി നിങ്ങൾ ഗ്രൂപ്പിൽ പോയി ഈ Bot വഴി അടുത്ത 1 മണിക്കൂറിൽ സീരിയൽ ബട്ടണിൽ ക്ലിക്ക് ചെയ്താൽ സീരിയൽ Direct ആയി അയച്ചു തരും ✅. </b> \n \nGroup Link :- https://t.me/+whVIAS400c02ZjVl", reply_markup=reply_markup, protect_content=True)
+        await message.reply(f"✅ <b>🧬 തങ്ങളുടെ വെരിഫിക്കേഷൻ പൂർണമായി ✅. \n \n 𝘕𝘖𝘛𝘌:- ഇനി നിങ്ങൾ ഗ്രൂപ്പിൽ പോയി ഈ Bot വഴി അടുത്ത 1 മണിക്കൂറിൽ സീരിയൽ ബട്ടണിൽ ക്ലിക്ക് ചെയ്താൽ സീരിയൽ Direct ആയി അയച്ചു തരും ✅. </b> \n \nGroup Link :- https://t.me/+whVIAS400c02ZjVl", reply_markup=reply_markup, protect_content=False)
         return
     
     verify_status = await get_verify_status(message.from_user.id)
@@ -93,7 +93,7 @@ async def start(client, message):
             ],[
                 InlineKeyboardButton('🗳 Tutorial 🗳', url=VERIFY_TUTORIAL)
             ]]
-            await message.reply("<b>🧬 താഴെ കാണുന്ന __🧿 VERIFY 🧿__ എന്ന ബട്ടണിൽ ക്ലിക്ക് ചെയ്ത് verify ചെയ്യുക.</b>", reply_markup=InlineKeyboardMarkup(btn), protect_content=True)
+            await message.reply("<b>🧬 താഴെ കാണുന്ന __🧿 VERIFY 🧿__ എന്ന ബട്ടണിൽ ക്ലിക്ക് ചെയ്ത് verify ചെയ്യുക.</b>", reply_markup=InlineKeyboardMarkup(btn), protect_content=False)
             return
     else:
         pass
